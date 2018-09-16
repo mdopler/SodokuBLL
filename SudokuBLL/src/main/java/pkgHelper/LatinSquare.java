@@ -97,11 +97,47 @@ public class LatinSquare {
 			return null;
 		for (int i = 0; i < getRow.length; i++) {
 			
-			getRow[i] = LatinSquare[i][iRow];
+			getRow[i] = LatinSquare[iRow][i];
 			
 		}
 		return getRow;
 	}
+	
+	public int[] getColumn(int iColumn) {
+		int[] getColumn = new int[LatinSquare.length];
+		if (iColumn > LatinSquare.length)
+			return null;
+		if (iColumn < LatinSquare.length)
+			return null;
+		for (int i = 0; i < getColumn.length; i++) {
+			
+			getColumn[i] = LatinSquare[i][iColumn];
+			
+		}
+		return getColumn;
+	}
+	
+	public boolean ContainsZero()
+	{
+		boolean ContainsZero = false;
+		for (int i = 0; i < LatinSquare.length; i++) {
+			
+			for (int j = 0; j < LatinSquare.length; j++) {
+				if (LatinSquare[i][j] == 0)
+					ContainsZero = true;
+			}
+		}
+		return ContainsZero;
+	}
+//	public boolean isLatinSquare() {
+//		boolean isLatinSquare = false;
+//		if (ContainsZero() == false)
+//			if 
+//		
+//		return isLatinSquare;
+//	}
+	
+	
 	
 }
 
