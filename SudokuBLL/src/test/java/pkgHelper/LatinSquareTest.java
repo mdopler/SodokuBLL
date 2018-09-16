@@ -133,6 +133,20 @@ public class LatinSquareTest {
 
 	}
 
+	@Test
+	public void getRowTest() {
+		int[][] mySquare = {{1,2,3},{3,1,2},{2,3,1}};
+		int[] myRow1 = {1,2,3};
+		int[] myRow2 = {3,1,2};
+		int[] myRow3 = {2,3,1};
+		LatinSquare ls = new LatinSquare (mySquare);
+		
+		assertTrue(ls.getRow(0) == myRow1);
+		assertTrue(ls.getRow(1) == myRow2);
+		assertTrue(ls.getRow(2) == myRow3);
+		
+		
+	}
 }
 
 
